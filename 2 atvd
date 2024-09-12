@@ -1,0 +1,51 @@
+/* 1 EXERCÍCIO */
+
+SELECT pedidos.pedido_id,
+pedidos.data_pedido,
+pedido.total.pedidos.status,
+clientes.nome,
+clientes.email
+FROM pedidos
+INNER JOIN clientes ON pedidos.cliente_id = clientes.clientes_id
+
+/*2°Sistema de Gestão de Relacionamento com o Cliente (CRM)*/
+/* 1 EXERCÍCIO */
+
+SELECT Clientes.Cliente_id,Cliente.nome
+Clientes.email,Clientes.telofone,
+Clientes.endereço
+Interacoes.Interacao_id, Interacoes.tipo,
+Interacoes.data_interacao,Interacoes.datalhes
+FROM clientes 
+LEFT JOIN Interacoes ON Clientes.Clientes_id= Interacoes.Cliente_id;
+
+/*3° Finanças e Controle Orçamentário*/
+/* 1 EXERCÍCIO */
+
+SELECT Transacoens.Transacoes_id.
+Transacoes.tipo, Transacoes.valor,
+Transacoes.data_transacao,
+Transacoes.descrisao ,Contas.nome
+FROM Transacoes
+INNER JOIN  contas ON 
+Transacoes.Conta_id + Contas.conta_id
+
+ /*4° Saúde e Gestão de Prontuários Eletrônicos*/
+ /* 1 EXERCÍCIO */
+ 
+SELECT Prontuarios.Prontuario_id, Pacientes.nome AS Nome_paciente,
+Prontuarios.medico, Prontuarios.diagnostico, 
+Prontuarios.prescricao,
+Prontuarios.observacoes,
+Prontuarios.data_consulta
+FROM Prontuarios
+INNER JOIN Pacientes ON Prontuarios.Paciente_id = Pacientes.Paciente_id;
+
+/*5° Logística e Cadeia de Suprimentos*/
+/* 1 EXERCÍCIO */
+
+SELECT 
+P.nome_produto, 
+F.nome_fornecedor
+FROM 
+produtos P LEFT JOIN fornecedores F ON P.id_fornecedor = F.id_fornecedor;
